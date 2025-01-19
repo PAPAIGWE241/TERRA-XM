@@ -1,4 +1,15 @@
-//keep calm*/
+/*
+_  ______   _____ _____ _____ _   _
+| |/ / ___| |_   _| ____/___ | | | |
+| ' / |  _    | | |  _|| |   | |_| |
+| . \ |_| |   | | | |__| |___|  _  |
+|_|\_\____|   |_| |_____\____|_| |_|
+
+ANYWAY, YOU MUST GIVE CREDIT TO MY CODE WHEN COPY IT
+CONTACT ME HERE +237656520674
+YT: KermHackTools
+Github: Kgtech-cmr
+*/
 
 
 
@@ -8,7 +19,7 @@ const { cmd, commands } = require('../command');
 
 cmd({
     pattern: "vv",
-    react : "👀",
+    react : "🦠",
     alias: ['retrive', "viewonce"],
     desc: "Fetch and resend a ViewOnce message content (image/video/voice).",
     category: "misc",
@@ -54,7 +65,7 @@ async (conn, mek, m, { from, reply }) => {
             let anu = await conn.downloadAndSaveMediaMessage(m.quoted.message.audioMessage);
             return conn.sendMessage(from, { audio: { url: anu } }, { quoted: mek });
         } else {
-            return reply("> *This is not a ViewOnce message guy.*");
+            return reply("> *This is not a ViewOnce message.*");
         }
     } catch (e) {
         console.log("Error:", e);
